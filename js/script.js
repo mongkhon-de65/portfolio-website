@@ -6,7 +6,6 @@ navToggle.addEventListener('click', () => {
     navMenu.classList.toggle('active');
     navToggle.classList.toggle('active');
 });
-
 // Close mobile menu when clicking on a link
 document.querySelectorAll('.nav-link').forEach(link => {
     link.addEventListener('click', () => {
@@ -14,7 +13,6 @@ document.querySelectorAll('.nav-link').forEach(link => {
         navToggle.classList.remove('active');
     });
 });
-
 // Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -28,7 +26,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
-
 // Navbar background on scroll
 window.addEventListener('scroll', () => {
     const navbar = document.querySelector('.navbar');
@@ -38,12 +35,10 @@ window.addEventListener('scroll', () => {
         navbar.style.background = 'rgba(255, 255, 255, 0.95)';
     }
 });
-
 // Contact form handling
 const contactForm = document.querySelector('.contact-form');
 contactForm.addEventListener('submit', (e) => {
     e.preventDefault();
-    
     // Get form data
     const formData = new FormData(contactForm);
     const name = formData.get('name');
@@ -73,7 +68,6 @@ themeToggle.addEventListener('click', () => {
     localStorage.setItem('theme', newTheme);
     updateThemeIcon(newTheme);
 });
-
 function updateThemeIcon(theme) {
     themeToggle.className = theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
 }
